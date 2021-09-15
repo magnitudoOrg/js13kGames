@@ -1,0 +1,32 @@
+// Level, Type, Question, Answers (correct one first)
+const Q = [
+[1,1,'What is the answer to life, universe and everything','42', 'evolution', 'love', '24'],
+[1,1,'Which planet is closest to the sun','Mercury','Venus','Earth','Mars'],
+[1,1,'What is the speed of light in km/s (vacuum)','299 792', '29 792', '3 000', '283 792'],
+[1,1,'What is the brightest star in the night sky','Sirius','Betelgeuse','Vega','Antares'],
+[1,1,'Who is the best pilot in Star Wars','Anakin','Luke','Han Solo', 'Jabba'],
+[1,1,'What is the nearest large galaxy to ours','Andromeda Galaxy','Virgo Cluster Galaxy','Fire Ring Galaxy','Horsehead Nebula'],
+[1,1,'What is the average distance to the moon in km','384 400', '38 400', '467 000', '1 254 700'],
+[1,1,'Which planet has visible rings','Saturn','Jupiter','Venus','Mars'],
+[1,1,'How big is the earth gravity in m/s² ','9.8', '98', '4.9', '9.2'],
+[1,1,'Where was Zaphod Beeblebrox born','Betelgeuse V','Sirius III','Aldebaran VI', 'Rigel II'],
+[1,1,'How is the density of the Mars atmosphere compared to earths','~1 %', '~10 %', '~33 %', '< 0.01 %'],
+[1,1,'What is the closest star to our solar system','Proxima Centauri','Sirius','Barnard\'s Star','Procyon'],
+[1,1,'How about a question with(out) space answers',' ',' ',' ',' '],
+
+[1,1,'How many earth days does Mars take to rotate around the sun','687','187','365','1376'],
+[1,1,'What is the diameter of our Milky Way Galaxy','200 000 ly','2 000 ly','950 000 ly','40 000 ly'],
+[1,1,'How big is the gravity of the moon compared to the earth','1/6', '1/4', '1/3', '1/2'],
+[1,1,'Will Elon reach Mars','Maybe','Yes - on impact','No','Yes'],
+[1,1,'How much space/volume in m³ is in a cube with a edge length of 4 m','64','16','60','12'],
+[1,1,'What will our sun be in approx. 5 billion years ','red giant','black hole','neutron star','moon'],
+[1,1,'How long does the moon take to rotate around the earth','27 days','7 weeks','4 months','13 days'],
+[1,1,'What are the essential elements of life', 'H, O, C, N, S, P','water, air, iron', 'H, O, C, N, S, Cl', 'U, O, B, N, P, Cl'],
+[1,1,'What is the age of the universe (in billtion years)','13.8', '4.5', '27.2', '137'],
+[1,1,'What is the diameter of the earth in km', '12742','6350','17981','175689'],
+[1,1,'How long is a day on Mars','24 h 39 min','29 h','23 h 30 min','48 h 12 min'],
+[1,1,'What is the smallest possible space/length','Planck length','Heisenberg space','Einstein length','Newton space'],
+[1,1,'How will the universe end','I don\'t know','big bang','big rip','thermal equilibrium'],
+
+//[1,1,'How ','','','',''],
+];

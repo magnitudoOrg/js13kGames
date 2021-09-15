@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Space Quiz Shooter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <meta charset="utf-8" />
+    <style type="text/css"> 
+    /*body { margin:0; padding:0; overflow:hidden; background-color: yellow;} */
+	html, body { margin: 0;padding:0;border:0;width:100%;height:100%; font-family: Arial; background: #111; }
+    .centerWrap { position: absolute; left: 50%; top: 50%; margin-left: -300px; margin-top: -300px; width: 600px; height: 600px; background: #111; border-radius: 10px; cursor: crosshair; color: rgba(230,230,255,1); font-size: 22px; }
+    #menu { display: none; }
+    .noSel { user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+	#c { background: #000; border-radius: 10px; touch-action: manipulation; }
+	#qContainer { position: absolute; left: 0%; top: 2%;  text-align: center; width: 100%; background: transparent; opacity: 0; transition:opacity 700ms ease-in-out; }
+	#qFlex { display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+	#qFlex div { box-sizing: border-box; text-align: left; width: 45%; padding: 5px 0; }
+	#qFlex div#q { width: 90%; text-align: center; }
+	#gameEnd { position: absolute; width: 100%; margin-top: 250px; text-align: center; background: rgba(0,0,0,0.5); padding: 20px 0; cursor: pointer; display: none; }
+    </style>
+  </head>
+  
+  <body>
+  
+	<div class="centerWrap">
+		<div id="qContainer" class="noSel">  
+			<div id="qFlex">
+				<div id="q">Question? </div>
+				<div id="a1">1 </div>
+				<div id="a2">2 </div>
+				<div id="a3">3 </div>
+				<div id="a4">4 </div>
+			</div>
+        </div>	
+		
+		<div id="gameEnd" onclick="window.location.reload();"> 
+			<span id="gameEndText">Game over!</span> <br><br>
+			Click here to reload.
+		</div>
+        
+       <canvas id="c" width="600" height="600">No Canvas Support?</canvas>
+    </div>  
+	
+	<script src="js/zzfx.js"></script>
+	
+	<script src="js/SpaceObj.js"></script>
+	<script src="js/Ship.js"></script>
+	<script src="js/Answer.js"></script>
+	<script src="js/Particle.js"></script>
+	<script src="js/Bullet.js"></script>
+	<script src="js/Player.js"></script>
+	<script src="js/Game.js"></script>
+	<script src="js/Questions.js"></script>
+	
+    <script>
+	
+	
+// sry, not separated to modules yet
+// import {Game} from './js/Game.js';
+	
+// Some global helpers
+const pi = Math.PI;
+const pi2 = 2 * pi;
+
+function rand(min = 0, max = 1) {
+	return Math.random() * (max - min) + min;
+};
+
+function shuffleArray(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(rand() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+
+
+const F_ENEMY = -1;
+const F_NEUTRAL = 0;
+const F_FRIEND = 1;
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+
+const game = new Game(); 
+game.loop();
+      
+    </script>    
+    
+  </body>
+</html>
